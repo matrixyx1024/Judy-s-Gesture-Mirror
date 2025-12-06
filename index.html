@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Judy's Gesture Mirror</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              animation: {
+                'bounce-high': 'bounce-high 0.8s infinite',
+                'wave': 'wave 1s infinite ease-in-out',
+                'wave-reverse': 'wave-reverse 1s infinite ease-in-out',
+                'wiggle-slow': 'wiggle 2s ease-in-out infinite',
+                'wiggle-slow-reverse': 'wiggle-reverse 2s ease-in-out infinite',
+                'fade-in': 'fadeIn 0.3s ease-in',
+                'dance': 'dance 1s infinite ease-in-out',
+              },
+              keyframes: {
+                'bounce-high': {
+                  '0%, 100%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+                  '50%': { transform: 'translateY(-25%)', animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)' },
+                },
+                wave: {
+                  '0%, 100%': { transform: 'rotate(0deg)' },
+                  '25%': { transform: 'rotate(-20deg)' },
+                  '75%': { transform: 'rotate(5deg)' },
+                },
+                'wave-reverse': {
+                  '0%, 100%': { transform: 'rotate(0deg)' },
+                  '25%': { transform: 'rotate(20deg)' },
+                  '75%': { transform: 'rotate(-5deg)' },
+                },
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' },
+                },
+                'wiggle-reverse': {
+                    '0%, 100%': { transform: 'rotate(3deg)' },
+                    '50%': { transform: 'rotate(-3deg)' },
+                },
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translate(-50%, 10px)' },
+                    '100%': { opacity: '1', transform: 'translate(-50%, 0)' },
+                },
+                dance: {
+                  '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                  '25%': { transform: 'translateY(-10px) rotate(-5deg)' },
+                  '75%': { transform: 'translateY(-5px) rotate(5deg)' },
+                }
+              }
+            }
+          }
+        }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

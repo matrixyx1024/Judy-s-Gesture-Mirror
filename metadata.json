@@ -1,0 +1,8 @@
+{
+  "name": "Judy's Gesture Mirror",
+  "description": "Control a Zootopia-inspired animated character using hand gestures and voice commands via the Gemini Live API.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
